@@ -4,7 +4,7 @@
   tasks:
     - name: copy a file
       copy:
-        src: ansible/compose.yaml
+        src: /ansible/compose.yaml
         dest: /home/compose.yaml
 
     - name: Init a new swarm with default parameters
