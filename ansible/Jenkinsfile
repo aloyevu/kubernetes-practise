@@ -4,15 +4,15 @@ pipeline {
         stage('startup') {
            steps {
                 sh '''
-				echo "Started Jenkins pipeline"
-				'''
+		echo "Started Jenkins pipeline"
+		'''
             }    
         }
 		stage('ansible-playbook') {
            steps {
                 sh '''
-				ansible-playbook -i ansible/inventory ansible/playbook.yaml
-				'''
+		ansible-playbook -i ansible/inventory ansible/playbook.yaml
+		'''
             }    
         }    
     }
