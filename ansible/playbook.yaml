@@ -7,10 +7,6 @@
         src: ansible/compose.yaml
         dest: /home/compose.yaml
 
-- name: install dependencies
-  hosts: worker
-  become: true
-  tasks:
     - name: Install aptitude
       apt:
         name: aptitude
@@ -77,7 +73,6 @@
     - name: Init a new swarm with default parameters
       community.docker.docker_swarm:
         state: present
-        advertise_addr: 192.168.1.39
 
     - name: Deploy stack from a compose file
       docker_stack:
