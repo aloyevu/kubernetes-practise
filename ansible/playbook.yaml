@@ -2,10 +2,7 @@
   hosts: worker
   become: true
   tasks:
-    - name: Touch a file, using symbolic modes to set the   permissions (equivalent to 0644)
-      ansible.builtin.file:
-        path: /home/compose.yaml
-        state: touch
+
     - name: copy a file
       copy:
         src: ansible/compose.yaml
