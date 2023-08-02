@@ -11,7 +11,7 @@ pipeline {
 		stage('ansible-playbook') {
            steps {
                 sh '''
-		ansible-playbook -i /var/jenkins_home/workspace/ansible-playbook/ansible/inventory /var/jenkins_home/workspace/ansible-playbook/ansible/playbook.yaml
+		ansible-playbook -i ansible/inventory ansible/playbook.yaml
 		'''
             }    
         }    
