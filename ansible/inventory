@@ -1,0 +1,13 @@
+[master]
+192.168.1.75
+[worker]
+192.168.1.39
+[servers]
+192.168.1.75
+192.168.1.39
+#bu yerda worker server aslida swarm manager bulmoqda
+
+[worker:vars]
+ansible_user=umrullo
+ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=/var/jenkins_home/workspace/team1
