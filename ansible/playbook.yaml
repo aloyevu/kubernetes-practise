@@ -5,7 +5,7 @@
 
     - name: copy a file
       copy:
-        src: /var/jenkins_home/workspace/ansible-playbook/ansible/compose.yaml
+        src: compose.yaml
         dest: /home/compose.yaml
 
     - name: Init a new swarm with default parameters
