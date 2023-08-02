@@ -1,6 +1,5 @@
 - name: copy file  to worker
   hosts: worker
-  become: true
   tasks:
 
     - name: copy a file
