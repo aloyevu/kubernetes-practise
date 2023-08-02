@@ -8,7 +8,7 @@ pipeline {
 		'''
             }    
         }
-		stage('ansible-playbook') {
+	stage('ansible-playbook') {
            steps {
                 sh '''
 		ansible-playbook -i ansible/inventory ansible/playbook.yaml
